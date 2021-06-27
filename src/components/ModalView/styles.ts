@@ -4,7 +4,7 @@ import { theme } from '../../global/styles/theme';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 100,
+    marginTop: 70,
   },
   overlay: {
     flex: 1,
@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.secondary30,
     alignSelf: 'center',
     marginTop: 13,
-    marginBottom: 103,
   },
 });
 

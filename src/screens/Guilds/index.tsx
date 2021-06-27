@@ -1,10 +1,8 @@
 import React from "react";
 import { View, FlatList } from "react-native";
 
-import { Guild } from "../../components/Guild";
+import { Guild, GuildProps } from "../../components/Guild";
 import { ListDivider } from "../../components/ListDivider";
-
-import { GuildProps } from "../../components/Appointment";
 
 import styles from "./style";
 
@@ -20,6 +18,42 @@ export function Guilds({ handleGuildSelect }: GuildsProps) {
       icon: null,
       owner: true,
     },
+    {
+      id: "2",
+      name: "Lendários",
+      icon: null,
+      owner: true,
+    },
+    {
+      id: "3",
+      name: "Lendários",
+      icon: null,
+      owner: true,
+    },
+    {
+      id: "4",
+      name: "Lendários",
+      icon: null,
+      owner: true,
+    },
+    {
+      id: "5",
+      name: "Lendários",
+      icon: null,
+      owner: true,
+    },
+    {
+      id: "6",
+      name: "Lendários",
+      icon: null,
+      owner: true,
+    },
+    {
+      id: "7",
+      name: "Lendários",
+      icon: null,
+      owner: true,
+    },
   ];
 
   return (
@@ -30,9 +64,11 @@ export function Guilds({ handleGuildSelect }: GuildsProps) {
         renderItem={({ item }) => (
           <Guild data={item} onPress={() => handleGuildSelect(item)} />
         )}
-        ItemSeparatorComponent={() => <ListDivider />}
+        ListHeaderComponent={() => <ListDivider isCentered />}
+        ItemSeparatorComponent={() => <ListDivider isCentered />}
         showsVerticalScrollIndicator={false}
         style={styles.guilds}
+        contentContainerStyle={{ paddingBottom: 70, paddingTop: 70 }}
       />
     </View>
   );
